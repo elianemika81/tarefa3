@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Source Code Pro", monospace;
+}
+
+#container {
+    height: 550px;
+    width: 1080px;
+    margin: 0 auto;
+}
+
+#container::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1080px;
+    height: 550px;
+    background-color: #05a3d4;
+    z-index: -1;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 1130px;
+    background-color: #004D75;
+}
+
+#page-title {
+    float: left;
+    padding-left: 20px;
+    margin: 20px;
+    color: #EFFBFF;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 10px 20px 10px;
+    float: right;
+}
+
+nav ul li {
+    float: left;
+    margin: 20px;
+}
+
+a {
+    color: #EFFBFF;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #E79B25;
+}
+
+main {
+    margin-top: 100px;
+}
+
+.text-container {
+    /* border: solid 1px black; */
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+    max-width: 500px;
+    padding-top: 10px;
+    margin-left: 40px;
+    font-size: 18px;
+}
+
+p {
+    padding: 10px;
+}
+
+.form-container {
+    /* border: solid 1px black; */
+    padding: 15px;
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+    font-size: 18px;
+}
+
+fieldset {
+    /* border: solid 1px red; */
+    padding: 15px;
+    margin-right: 20px;
+}
+
+.campo {
+    /* border: solid 1px black; */
+    display: block;
+    margin: 10px 0;
+    padding: 5px;
+    width: 90%;
+}
+
+.botao {
+    display: block;
+    margin: 10px auto;
+    padding: 5px 10px;
+    background-color: #004D75;
+    color: #EFFBFF;
+    border: none;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: #E79B25;
+}
+
+footer {
+    font-size: 16px;
+    position: fixed;
+    bottom: 0;
+    width: 1090px;
+    background-color: #004D75;
+    color: #EFFBFF;
+    padding: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
