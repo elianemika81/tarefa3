@@ -6,6 +6,8 @@
 
 #container {
     height: 550px;
+    width: 1080px;
+    margin: 0 auto;
 }
 
 #container::before {
@@ -60,12 +62,8 @@ a:hover {
 main {
     font-size: 18px;
     margin-top: 130px;
-    margin-left: 210px;
-}
-
-form {
-    border: solid, 1px, red;
-
+    margin-left: 70px;
+    width: 1080px;
 }
 
 select {
@@ -101,16 +99,31 @@ input {
     width: 314px;
     margin-top: 5px;
     font-weight: 700;
+    margin-left: -80px;
 }
 
 #clear {
     width: 314px;
 }
 
+#playersTable th, #playersTable td {
+    font-family: Arial, sans-serif !important;
+    padding-right: 10px;
+    border-right: 1px solid #ccc;
+}
+
+table {
+    border: solid 1px black;
+    border-spacing: 10px;
+    margin-top: 20px;
+    background-color: #EFFBFF;
+    padding: 10px;
+}
+
 th {
     /* border: solid 1px darkblue; */
-    padding-top: 20px;
-    padding-right: 120px;
+    text-align: left;
+    margin-right: 20px;
 }
 
 footer {

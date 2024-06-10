@@ -50,7 +50,7 @@ class Database {
 
     createTask(task) {
         let id = getId();
-        localStorage.setItem(id, JSON.stringify(task)); // Transforma o objeto (task) em string JSON para q seja armazenado no localStorage
+        localStorage.setItem(id, JSON.stringify(task));
         localStorage.setItem('id', id);
     }
 
@@ -59,9 +59,9 @@ class Database {
 function getId() {
     const nextId = localStorage.getItem('id');
     if (nextId === null) {
-        return 1; // Initialize to 1 if 'id' is not set
+        return 1; 
     } else {
-        return parseInt(nextId, 10) + 1; // Parse to integer and increment
+        return parseInt(nextId, 10) + 1; 
     }
 }
 
@@ -76,6 +76,11 @@ function registerTask(event) {
     const telefone  = document.getElementById('telefone').value
     const cidade    = document.getElementById('cidade').value
 
+    if (nome === "" || bairro === "" || email === "" || telefone === "" || cidade === "") {
+        alert("Você precisa completar todos os campos.");
+        return; // Exit the function
+    }
+
     const task = new Task(nome, bairro, email, telefone, cidade);
 
     if (task.validateData()) {
@@ -89,23 +94,26 @@ function loadTasksOnClick(event) {
     const cidade = document.getElementById('cidade').value;
     if (cidade === "") {
         alert("Escolha uma cidade");
-        return; // Exit the function
+        return; // 
     }
     const tasks = database.getTasks();
-  
     const listPlayers = document.getElementById("listPlayers");
     listPlayers.innerHTML = ""; // Clear the list
   
-    tasks.forEach((t) => {
-      if (t.cidade === cidade) {
+    let tasksFound = tasks.filter((t) => t.cidade === cidade);
+  
+    if (tasksFound.length === 0) {
+      alert("Não existem jogadores cadastrados nesta cidade.");
+    } else {
+      tasksFound.forEach((t) => {
         const row = listPlayers.insertRow();
         row.insertCell(0).innerHTML = `${t.nome}`;
         row.insertCell(1).innerHTML = `${t.bairro}`;
         row.insertCell(2).innerHTML = `${t.email}`;
         row.insertCell(3).innerHTML = `${t.telefone}`;
-                row.insertCell(4).innerHTML = `${t.cidade}`;
-      }
-    });
+        row.insertCell(4).innerHTML = `${t.cidade}`;
+      });
+    }
 }
 
 document.getElementById("search").addEventListener("click", loadTasksOnClick);
