@@ -69,10 +69,16 @@ main {
     font-size: 18px;
 }
 
-#finder {
+#find {
     /* bordexr: solid 1px black; */
     margin-left: 50px;
     padding-top: 40px;
+}  
+
+#register {
+    /* bordexr: solid 1px black; */
+    margin-left: 50px;
+    padding-top: 20px;
 }  
 
 button {

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+        <title>Cadastre Jogadores!</title>
+        <link rel="stylesheet" href="find-register.css">
+    </head>
+    <body>
+        <div id="container">
+            <header>
+                <div id="page-title">
+                    <h1>Encontre Jogadores!</h1>
+                </div>
+                <nav>
+                    <ul id="about">
+                        <li><a href="home.html">Página Principal</a></li>
+                        <li><a href="register.html" id="find-top"> Cadastre jogador</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <form id="searchForm" action="" method="get">
+
+                    <label for="cidade">Cidade:</label>
+                    <select name="select" id="cidade">
+                        <option value="" disabled selected>Selecione uma opção abaixo:</option>
+                        <option value="São Paulo">São Paulo</option>
+                        <option value="Osasco">Osasco</option>
+                    </select>
+
+                    <label for="search"></label> 
+                    <input onclick="loadTasks()" type="submit" id="search" name="search" value="Encontre jogadores!"> 
+         
+                </form>
+                
+                <div id="players">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Bairro</th>
+                            <th>E-mail</th>
+                            <th>Telefone</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listPlayers"></tbody>
+                </table>
+                </div>
+            </main>
+            <footer>
+                Desenvolvido por <a href="https://github.com/elianemika81/" target="_blank">Mika </a>- 2024
+            </footer>
+        </div>
+        <script src="find-register.js"></script>
+    </body>
+</html>

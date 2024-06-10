@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+        <title>Cadastre Jogadores!</title>
+        <link rel="stylesheet" href="find-register.css">
+    </head>
+    <body>
+        <div id="container">
+            <header>
+                <div id="page-title">
+                    <h1>Encontre um jogador!</h1>
+                </div>
+                <nav>
+                    <ul id="about">
+                        <li><a href="home.html">Página Principal</a></li>
+                        <li><a href="find.html" id="find-top">Encontre jogadores</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <form>
+                    <div>
+                        <label for="nome">Nome:</label> <!-- Linkar label e input através do ID -->
+                        <input type="text" id="nome" placeholder="Nome completo" name="nome">
+                    </div>
+                    <div>
+                        <label for="bairro">Bairro:</label> 
+                        <input type="text" id="bairro" name="bairro">
+                    </div>
+                    <div>
+                        <label for="email">E-mail:</label> 
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div>
+                        <label for="telefone">Telefone:</label> 
+                        <input type="text" id="telefone" placeholder="Telefone com DDD" name="telefone">
+                    </div>
+                    <div>
+                        <label for="cidade">Cidade:</label>
+                        <select name="select" id="cidade">
+                            <option value="" disabled selected>Selecione uma opção abaixo:</option>
+                            <option value="São Paulo">São Paulo</option>
+                            <option value="Osasco">Osasco</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="register"></label> 
+                        <input onclick="registerTask(event)" type="button" id="register" name="register" value="Cadastre jogador!">
+                    </div>
+                    <div>
+                        <label for="clear"></label> 
+                        <input type="reset" id="clear" name="clear" value="Limpar formulário">
+                    </div>
+                </form>
+            </main>
+            <footer>
+                Desenvolvido por <a href="https://github.com/elianemika81/" target="_blank">Mika </a>- 2024
+            </footer>
+            <script src="find-register.js"></script>
+        </div>
+    </body>
+</html>
